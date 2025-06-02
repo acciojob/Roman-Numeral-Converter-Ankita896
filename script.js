@@ -11,12 +11,14 @@ function convertToRoman(num) {
 
   let result = '';
 
-    for (const [roman, value] of romanMapping) {
-        while (num >= value) {
-            result += roman;
-            num -= value;
-        }
-    }
+    let i=0;
+	while(num>0){
+		for(; num>=val;num-=val[i]){
+			result+=obj[i];
+		}
+		i++;
+	}
+    
 
     return result;
 
