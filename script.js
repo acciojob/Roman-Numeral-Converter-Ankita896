@@ -9,7 +9,7 @@ function convertToRoman(num) {
       6:['I', 1]
     ];
 
- let result = '';
+   let result = '';
 
     for (let i = 0; i < obj.length; i++) {
         const [symbol, value] = obj[i];
@@ -17,27 +17,7 @@ function convertToRoman(num) {
             result += symbol;
             num -= value;
         }
-    }
 
-    // Handle cases like 4 (IV), 9 (IX), 40 (XL), 90 (XC), 400 (CD), 900 (CM)
-    const specialCases = [
-        ['CM', 900],
-        ['CD', 400],
-        ['XC', 90],
-        ['XL', 40],
-        ['IX', 9],
-        ['IV', 4]
-    ];
-
-    for (let i = 0; i < specialCases.length; i++) {
-        const [symbol, value] = specialCases[i];
-        while (num >= value) {
-            result += symbol;
-            num -= value;
-        }
-    }
-
-    return result;
 
     
 
